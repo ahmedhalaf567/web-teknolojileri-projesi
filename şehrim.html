@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şehrim | İzmir</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Slider resimlerinin boyutunu sabitlemek için özel stil */
+        .carousel-item img {
+            height: 550px; /* Yüksekliği sabitledik */
+            object-fit: cover; /* Resmi sığdırmak için kırpar, esnetmez */
+        }
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 300px; /* Mobilde daha küçük yükseklik */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">WebProje</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="sehrim.html">Şehrim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+                        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                        <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-2" href="login.html">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="izmirCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#izmirCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#izmirCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#izmirCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#izmirCarousel" data-bs-slide-to="3"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1619623810148-bd06c3a07204?q=80&w=1200&h=550&fit=crop" class="d-block w-100" alt="Konak Saat Kulesi">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                        <h5 class="fw-bold">Konak Saat Kulesi</h5>
+                        <p>İzmir'in kalbi ve şehrin en tanınmış simgesi.</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=1200&h=550&fit=crop" class="d-block w-100" alt="Efes Antik Kenti">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                        <h5 class="fw-bold">Efes Antik Kenti</h5>
+                        <p>Dünya Mirası listesindeki muazzam tarihi hazine.</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1614275069777-6bb9a444d320?q=80&w=1200&h=550&fit=crop" class="d-block w-100" alt="Tarihi Asansör">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                        <h5 class="fw-bold">Tarihi Asansör</h5>
+                        <p>Karataş'ta eşsiz şehir ve körfez manzarası sunan yapı.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1603566100780-87779f4299b9?q=80&w=1200&h=550&fit=crop" class="d-block w-100" alt="İzmir Kordon">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                        <h5 class="fw-bold">Kordon Boyu</h5>
+                        <p>Gün batımının ve deniz havasının tadını çıkarma merkezi.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#izmirCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Önceki</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#izmirCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Sonraki</span>
+            </button>
+        </section>
+
+        <article class="container mt-5 p-4 bg-white shadow rounded">
+            <h2 class="fw-bold mb-4 border-bottom pb-2 text-primary">Ege'nin İncisi: İzmir</h2>
+            <div class="row">
+                <div class="col-lg-7">
+                    <p class="lead">İzmir, Türkiye'nin batısında, Ege Denizi kıyısında yer alan, tarihi ve kültürel zenginlikleriyle öne çıkan üçüncü büyük şehridir.</p>
+                    <p>M.Ö. 3000'li yıllara dayanan köklü geçmişiyle (Smyrna), tarih boyunca Akdeniz'in en önemli liman kentlerinden biri olmuştur. Modern İzmir, palmiyelerle süslü kordon boyu, canlı sokakları ve hoşgörülü insan yapısıyla dikkat çeker.</p>
+                    <p>Kemeraltı Çarşısı'nın tarihi dokusu, Çeşme'nin dünyaca ünlü plajları ve boyoz gibi eşsiz lezzetleriyle misafirlerine zengin bir deneyim sunar.</p>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card bg-light border-primary">
+                        <div class="card-header bg-primary text-white fw-bold">Görülmesi Gereken 4 Yer</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">📍 Konak Meydanı & Saat Kulesi</li>
+                            <li class="list-group-item">📍 Tarihi Asansör (Manzara Noktası)</li>
+                            <li class="list-group-item">📍 Efes Antik Kenti & Meryem Ana</li>
+                            <li class="list-group-item">📍 Alsancak Kordon Boyu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="py-4 mt-5 bg-dark text-white text-center">
+        <div class="container">
+            <p class="m-0 small">© 2026 Ahmet Abdulhalaf - Web Teknolojileri Projesi</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
