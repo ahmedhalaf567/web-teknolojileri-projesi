@@ -7,11 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <style>
-        .hobby-header { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=1200'); background-size: cover; color: white; padding: 60px 0; }
-        .list-group-item:hover { background-color: #f8f9fa; }
-        .barca-accent { border-left: 5px solid #A50044; border-right: 5px solid #004D98; }
-    </style>
 </head>
 <body class="bg-light">
 
@@ -36,36 +31,32 @@
 
     <section class="hobby-header text-center mb-5">
         <div class="container">
-            <h1 class="display-4 fw-bold">Dünyam ve İlgi Alanlarım</h1>
-            <p class="lead">Edebiyattan futbola, sinemadan bilime kadar beni besleyen her şey.</p>
+            <h1 class="display-4 fw-bold">Nelerle İlgileniyorum?</h1>
+            <p class="lead">Kendi dünyamdan kesitler: Edebiyat, Sinema ve Futbol.</p>
         </div>
     </section>
 
     <main class="container mb-5">
         <div class="row g-4">
             <div class="col-lg-8">
-                <section class="bg-white p-4 rounded shadow-sm h-100">
-                    <h3 class="fw-bold border-bottom pb-2 mb-3 text-dark"><i class="bi bi-film me-2"></i>Sinema & Dizi</h3>
-                    <p>Karmaşık karakterleri ve derin kurguları olan yapımları izlemekten büyük keyif alıyorum. Özellikle psikolojik derinliği olan diziler her zaman favorim.</p>
-                    <div class="row row-cols-1 row-cols-md-2 g-3 mt-2">
-                        <div class="col">
-                            <div class="p-3 border rounded bg-light">
-                                <h6 class="fw-bold mb-1">Favori Diziler</h6>
-                                <ul class="small mb-0">
-                                    <li>Dexter (Adalet Kavramı)</li>
-                                    <li>Game of Thrones (Politik Kurgu)</li>
-                                    <li>Breaking Bad (Karakter Dönüşümü)</li>
-                                </ul>
-                            </div>
+                <section class="bg-white p-4 rounded shadow-sm h-100 border-top border-primary border-4">
+                    <h3 class="fw-bold mb-3"><i class="bi bi-film me-2"></i>Sinema & Dizi</h3>
+                    <p>Karakter analizinin derin olduğu yapımlar her zaman favorimdir. Özellikle Dexter'daki adalet arayışı veya Breaking Bad'deki dönüşüm beni çok etkilemişti.</p>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <h6 class="fw-bold text-muted">Diziler</h6>
+                            <ul class="list-unstyled">
+                                <li>⭐ Dexter</li>
+                                <li>⭐ Game of Thrones</li>
+                                <li>⭐ Breaking Bad</li>
+                            </ul>
                         </div>
-                        <div class="col">
-                            <div class="p-3 border rounded bg-light">
-                                <h6 class="fw-bold mb-1">Favori Filmler</h6>
-                                <ul class="small mb-0">
-                                    <li>Interstellar (Bilim & Duygu)</li>
-                                    <li>A Beautiful Mind (Zeka & Mücadele)</li>
-                                </ul>
-                            </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold text-muted">Filmler</h6>
+                            <ul class="list-unstyled">
+                                <li>🚀 Interstellar</li>
+                                <li>🧠 A Beautiful Mind</li>
+                            </ul>
                         </div>
                     </div>
                 </section>
@@ -73,78 +64,69 @@
 
             <div class="col-lg-4">
                 <section class="bg-white p-4 rounded shadow-sm h-100 barca-accent">
-                    <h3 class="fw-bold mb-3"><i class="bi bi-trophy-fill text-warning me-2"></i>Futbol</h3>
-                    <p>Avrupa futbolu, özellikle taktiksel disipliniyle ilgimi çekiyor. Kalbimde ise tek bir takım var:</p>
-                    <div class="text-center p-3 rounded mb-3" style="background-color: #004D98; color: white;">
-                        <h4 class="m-0 fw-bold">FC BARCELONA</h4>
-                        <small>"Mes Que Un Club"</small>
-                    </div>
-                    <ul class="list-group list-group-flush small">
-                        <li class="list-group-item bg-transparent px-0">⚽ La Liga Takibi</li>
-                        <li class="list-group-item bg-transparent px-0">⚽ Taktik Analizler</li>
-                        <li class="list-group-item bg-transparent px-0">⚽ Transfer Gündemi</li>
-                    </ul>
-                </section>
-            </div>
-
-            <div class="col-12">
-                <section class="bg-white p-4 rounded shadow-sm">
-                    <h3 class="fw-bold border-bottom pb-2 mb-4"><i class="bi bi-journals me-2"></i>Edebiyat & Dünya Klasikleri</h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>Özellikle Rus edebiyatının insan psikolojisini işleyiş biçimi beni derinden etkiliyor. Klasik eserlerin zamanı aşan gücüne inanıyorum.</p>
-                        </div>
-                        <div class="col-md-6">
-                            <table class="table table-hover table-sm border">
-                                <thead class="table-dark">
-                                    <tr>
-                                        <th>Eser Adı</th>
-                                        <th>Yazar</th>
-                                        <th>Tür</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Suç ve Ceza</td>
-                                        <td>Dostoyevski</td>
-                                        <td>Psikolojik Roman</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Genç Bir Doktorun Anıları</td>
-                                        <td>Mihail Bulgakov</td>
-                                        <td>Anlatı</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Oblomov</td>
-                                        <td>İvan Gonçarov</td>
-                                        <td>Klasik Roman</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <h3 class="fw-bold mb-3"><i class="bi bi-trophy text-warning me-2"></i>Futbol</h3>
+                    <p>Avrupa futbolunu takip etmek benim için büyük bir tutku. Özellikle Katalan ekolünü temsil eden <strong>FC Barcelona</strong>'nın her maçını heyecanla beklerim.</p>
+                    <div class="alert alert-primary text-center fw-bold">
+                        Visca el Barça! 🔵🔴
                     </div>
                 </section>
             </div>
 
             <div class="col-12">
-                <section class="p-4 rounded shadow-sm bg-dark text-white text-center">
-                    <h5 class="text-uppercase mb-3 small" style="letter-spacing: 2px;">Günün İlham Veren Sözü</h5>
+                <section class="bg-white p-4 rounded shadow-sm border-top border-success border-4">
+                    <h3 class="fw-bold mb-4 text-success"><i class="bi bi-journals me-2"></i>Dünya Klasikleri & Rus Edebiyatı</h3>
+                    <p>İnsanın iç dünyasını en iyi anlatan eserlerin Rus yazarlardan çıktığına inanıyorum. İşte başucu kitaplarım:</p>
+                    <div class="table-responsive">
+                        <table class="table table-hover border mt-2">
+                            <thead class="table-success">
+                                <tr>
+                                    <th>Kitap Adı</th>
+                                    <th>Yazar</th>
+                                    <th>Tür</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Suç ve Ceza</td>
+                                    <td>Dostoyevski</td>
+                                    <td>Psikolojik Roman</td>
+                                </tr>
+                                <tr>
+                                    <td>Genç Bir Doktorun Anıları</td>
+                                    <td>Mihail Bulgakov</td>
+                                    <td>Anlatı</td>
+                                </tr>
+                                <tr>
+                                    <td>Oblomov</td>
+                                    <td>İvan Gonçarov</td>
+                                    <td>Klasik Roman</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-12">
+                <section class="quote-section text-center">
+                    <h5 class="text-uppercase small mb-3 text-secondary" style="letter-spacing: 3px;">Haftanın Alıntısı (API)</h5>
                     <blockquote class="blockquote">
-                        <p id="quote-text" class="display-6 fst-italic">"Hayat, fırtınanın geçmesini beklemek değil, yağmurda dans etmeyi öğrenmektir."</p>
-                        <footer id="quote-author" class="blockquote-footer mt-2">Anonim</footer>
+                        <p id="quote-text" class="display-6 fst-italic">"Sözler yükleniyor..."</p>
+                        <footer id="quote-author" class="blockquote-footer mt-2 text-white-50">...</footer>
                     </blockquote>
-                    <button onclick="fetchQuote()" class="btn btn-outline-light btn-sm mt-2">Başka Bir Söz Getir</button>
+                    <button onclick="fetchQuote()" class="btn btn-outline-light btn-sm">Başka Bir Alıntı</button>
                 </section>
             </div>
         </div>
     </main>
 
     <footer class="py-4 bg-dark text-white text-center">
-        <p class="m-0 small">© 2026 Ahmet Abdulhalaf - Tüm Hakları Saklıdır.</p>
+        <p class="m-0 small">© 2026 Ahmet Abdulhalaf - 7. Gün Düzenlemesi</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Hocam burada asenkron veri çekme (fetch) yapıyoruz
         async function fetchQuote() {
             try {
                 const response = await fetch('https://api.quotable.io/random');
@@ -152,7 +134,8 @@
                 document.getElementById('quote-text').innerText = `"${data.content}"`;
                 document.getElementById('quote-author').innerText = data.author;
             } catch (error) {
-                console.log("API hatası, manuel söz gösteriliyor.");
+                document.getElementById('quote-text').innerText = "Hata olsa bile, denemeye devam et.";
+                document.getElementById('quote-author').innerText = "Developer Atasözü";
             }
         }
         fetchQuote();

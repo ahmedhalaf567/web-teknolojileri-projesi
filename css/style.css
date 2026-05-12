@@ -40,3 +40,107 @@ article h4 { color: #495057; }
 .carousel-caption {
     padding: 20px;
 }
+/* Slider resimlerinin standart bir boyutta kalması için */
+.main-slider-img {
+    height: 500px;
+    object-fit: cover; /* Resmi sündürmeden kutuya sığdırır */
+}
+
+/* Kutu içindeki yazıların daha okunaklı olması için ufak bir gölge */
+.carousel-caption h5 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Bilgi kutusu için modern arka plan */
+.bg-white.shadow-sm {
+    transition: transform 0.3s ease;
+}
+
+.bg-white.shadow-sm:hover {
+    transform: scale(1.02); /* Üzerine gelince hafif büyür */
+}
+/* --- MİRASIMIZ SAYFASI ÖZEL TASARIMI --- */
+
+/* Bölümler arasındaki geçişleri ve hizalamayı ayarlar */
+.heritage-section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+}
+
+/* Resimlere hafif bir gölge ve hover efekti */
+.heritage-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.heritage-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Bölümlere özel kenarlık renkleri -  görsel ayrım için kullandım */
+.border-efes { border-left: 6px solid #0d6efd !important; }    /* Mavi */
+.border-asansor { border-left: 6px solid #dc3545 !important; } /* Kırmızı */
+.border-kule { border-left: 6px solid #ffc107 !important; }    /* Sarı/Altın */
+/* --- İLGİ ALANLARIM SAYFASI ÖZEL TASARIMI --- */
+
+/* Üst kısımdaki havalı başlık alanı (Gradient geçişi) */
+.hobby-header { 
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/izmir4.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    color: white; 
+    padding: 80px 0; 
+}
+
+/* Barcelona kartına özel sağ-sol renkli şeritler */
+.barca-accent { 
+    border-left: 6px solid #A50044 !important; /* Bordo */
+    border-right: 6px solid #004D98 !important; /* Mavi */
+}
+
+/* Kitap tablosunun üzerine gelince hafif parlaması */
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+    transition: 0.3s;
+}
+
+/* API'den gelen sözün kutusu */
+.quote-section {
+    background-color: #212529;
+    color: #f8f9fa;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 40px;
+}
+/* --- Login Sayfası Tasarım Ayarları --- */
+
+/* Giriş kartının sayfada dikeyde ve yatayda tam ortalanması için */
+.login-container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Giriş kartı tasarımı: Hafif gölge ve yumuşak köşeler */
+.login-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Hocam burası şık dursun diye gölge ekledim */
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+/* Giriş butonuna hover efekti (üzerine gelince canlanması) */
+.btn-login {
+    background-color: #0d6efd;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px); /* Buton hafif yukarı kalkar */
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+}
