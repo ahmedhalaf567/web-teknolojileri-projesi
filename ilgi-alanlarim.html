@@ -4,141 +4,242 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İlgi Alanlarım | Ahmet Abdulhalaf</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-</head>
-<body class="bg-light">
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">WebProje</a>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
-                        <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
-                        <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
-                        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-                        <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-2" href="login.html">Login</a></li>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">WebProje</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
+                <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+                <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+                <li class="nav-item"><a class="nav-link active" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+                <li class="nav-item"><a class="nav-link" href="iletisim.php">İletişim</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="hobby-header text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">İlgi Alanlarım</h1>
+        <p class="lead">Teknoloji, oyun, futbol ve sevdiğim dizilere ait API verileri.</p>
+    </div>
+</header>
+
+<main class="container mt-5">
+
+    <section class="movie-api-section mb-5">
+        <div class="text-center mb-4">
+            <h6 class="text-primary text-uppercase fw-bold">API Entegrasyonu</h6>
+            <h2 class="fw-bold">Favori Dizilerim</h2>
+            <p class="text-muted">
+                Bu bölümde TVmaze API kullanılarak dizilere ait görsel, puan, tür, yıl ve açıklama bilgileri canlı olarak çekilmektedir.
+            </p>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-8">
+                <div class="input-group shadow-sm">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Dizi adı yazın... Örn: Dexter">
+                    <button class="btn btn-primary" onclick="searchShow()">Dizi Ara</button>
+                    <button class="btn btn-dark" onclick="loadFavorites()">Favorileri Getir</button>
+                </div>
+            </div>
+        </div>
+
+        <p id="api-status" class="text-center text-muted small">API verisi yükleniyor...</p>
+
+        <div id="movie-list" class="row g-4"></div>
+    </section>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card hobby-card h-100 shadow-lg border-0">
+                <div class="card-body">
+                    <h2 class="card-title h4 mb-4">🎮 Dijital Dünyalar</h2>
+
+                    <article class="mb-4">
+                        <h5>FPS ve Strateji Oyunları</h5>
+                        <p class="text-muted">
+                            CS2 ve Battlefield gibi oyunlarda takım çalışması,
+                            refleks ve strateji ön plandadır.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h5>Minecraft ve Yaratıcılık</h5>
+                        <p class="text-muted">
+                            Minecraft’ta farklı yapılar kurmak ve teknik sistemler
+                            tasarlamak hoşuma gider.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card hobby-card h-100 shadow-lg border-0 barca-accent">
+                <div class="card-body text-center d-flex flex-column justify-content-center">
+                    <h2 class="card-title h4 mb-3">⚽ FC Barcelona</h2>
+
+                    <h1 class="display-6 fw-bold barca-title">Barça</h1>
+
+                    <p class="fst-italic text-muted">"Més que un club"</p>
+
+                    <p class="mt-3 text-muted">
+                        Barcelona'nın futbol anlayışı ve genç oyunculara verdiği
+                        önem ilgimi çekmektedir.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card hobby-card h-100 shadow-lg border-0">
+                <div class="card-body">
+                    <h2 class="card-title h4 mb-4">🎬 Favori Yapımlarım</h2>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Dexter:</strong> Kriminal psikoloji.</li>
+                        <li class="list-group-item"><strong>Breaking Bad:</strong> Karakter gelişimi.</li>
+                        <li class="list-group-item"><strong>Game of Thrones:</strong> Strateji ve savaş.</li>
+                        <li class="list-group-item"><strong>Mr. Robot:</strong> Siber güvenlik.</li>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <section class="hobby-header text-center mb-5">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Nelerle İlgileniyorum?</h1>
-            <p class="lead">Kendi dünyamdan kesitler: Edebiyat, Sinema ve Futbol.</p>
         </div>
-    </section>
 
-    <main class="container mb-5">
-        <div class="row g-4">
-            <div class="col-lg-8">
-                <section class="bg-white p-4 rounded shadow-sm h-100 border-top border-primary border-4">
-                    <h3 class="fw-bold mb-3"><i class="bi bi-film me-2"></i>Sinema & Dizi</h3>
-                    <p>Karakter analizinin derin olduğu yapımlar her zaman favorimdir. Özellikle Dexter'daki adalet arayışı veya Breaking Bad'deki dönüşüm beni çok etkilemişti.</p>
-                    <div class="row mt-3">
-                        <div class="col-md-6">
-                            <h6 class="fw-bold text-muted">Diziler</h6>
-                            <ul class="list-unstyled">
-                                <li>⭐ Dexter</li>
-                                <li>⭐ Game of Thrones</li>
-                                <li>⭐ Breaking Bad</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <h6 class="fw-bold text-muted">Filmler</h6>
-                            <ul class="list-unstyled">
-                                <li>🚀 Interstellar</li>
-                                <li>🧠 A Beautiful Mind</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-            </div>
+    </div>
 
-            <div class="col-lg-4">
-                <section class="bg-white p-4 rounded shadow-sm h-100 barca-accent">
-                    <h3 class="fw-bold mb-3"><i class="bi bi-trophy text-warning me-2"></i>Futbol</h3>
-                    <p>Avrupa futbolunu takip etmek benim için büyük bir tutku. Özellikle Katalan ekolünü temsil eden <strong>FC Barcelona</strong>'nın her maçını heyecanla beklerim.</p>
-                    <div class="alert alert-primary text-center fw-bold">
-                        Visca el Barça! 🔵🔴
-                    </div>
-                </section>
-            </div>
+</main>
 
-            <div class="col-12">
-                <section class="bg-white p-4 rounded shadow-sm border-top border-success border-4">
-                    <h3 class="fw-bold mb-4 text-success"><i class="bi bi-journals me-2"></i>Dünya Klasikleri & Rus Edebiyatı</h3>
-                    <p>İnsanın iç dünyasını en iyi anlatan eserlerin Rus yazarlardan çıktığına inanıyorum. İşte başucu kitaplarım:</p>
-                    <div class="table-responsive">
-                        <table class="table table-hover border mt-2">
-                            <thead class="table-success">
-                                <tr>
-                                    <th>Kitap Adı</th>
-                                    <th>Yazar</th>
-                                    <th>Tür</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Suç ve Ceza</td>
-                                    <td>Dostoyevski</td>
-                                    <td>Psikolojik Roman</td>
-                                </tr>
-                                <tr>
-                                    <td>Genç Bir Doktorun Anıları</td>
-                                    <td>Mihail Bulgakov</td>
-                                    <td>Anlatı</td>
-                                </tr>
-                                <tr>
-                                    <td>Oblomov</td>
-                                    <td>İvan Gonçarov</td>
-                                    <td>Klasik Roman</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-            </div>
+<footer class="text-center py-4 mt-5 bg-dark text-white">
+    <div class="container">
+        <p class="mb-0">© 2026 Ahmed Halaf | Web Teknolojileri Projesi</p>
+    </div>
+</footer>
 
-            <div class="col-12">
-                <section class="quote-section text-center">
-                    <h5 class="text-uppercase small mb-3 text-secondary" style="letter-spacing: 3px;">Haftanın Alıntısı (API)</h5>
-                    <blockquote class="blockquote">
-                        <p id="quote-text" class="display-6 fst-italic">"Sözler yükleniyor..."</p>
-                        <footer id="quote-author" class="blockquote-footer mt-2 text-white-50">...</footer>
-                    </blockquote>
-                    <button onclick="fetchQuote()" class="btn btn-outline-light btn-sm">Başka Bir Alıntı</button>
-                </section>
-            </div>
-        </div>
-    </main>
+<script>
+const favoriteShows = ["Dexter", "Breaking Bad", "Game of Thrones", "Mr Robot"];
 
-    <footer class="py-4 bg-dark text-white text-center">
-        <p class="m-0 small">© 2026 Ahmet Abdulhalaf - 7. Gün Düzenlemesi</p>
-    </footer>
+async function loadFavorites() {
+    const movieList = document.getElementById("movie-list");
+    const apiStatus = document.getElementById("api-status");
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Hocam burada asenkron veri çekme (fetch) yapıyoruz
-        async function fetchQuote() {
-            try {
-                const response = await fetch('https://api.quotable.io/random');
-                const data = await response.json();
-                document.getElementById('quote-text').innerText = `"${data.content}"`;
-                document.getElementById('quote-author').innerText = data.author;
-            } catch (error) {
-                document.getElementById('quote-text').innerText = "Hata olsa bile, denemeye devam et.";
-                document.getElementById('quote-author').innerText = "Developer Atasözü";
+    movieList.innerHTML = "";
+    apiStatus.innerText = "Favori diziler API üzerinden yükleniyor...";
+
+    try {
+        for (const showName of favoriteShows) {
+            const response = await fetch("https://api.tvmaze.com/search/shows?q=" + encodeURIComponent(showName));
+
+            if (!response.ok) {
+                throw new Error("API bağlantısı başarısız.");
+            }
+
+            const data = await response.json();
+
+            if (data.length > 0) {
+                createShowCard(data[0].show);
             }
         }
-        fetchQuote();
-    </script>
+
+        apiStatus.innerText = "Veriler canlı olarak TVmaze API üzerinden çekildi.";
+    } catch (error) {
+        apiStatus.innerText = "API bağlantısı kurulamadı. Hata: " + error.message;
+    }
+}
+
+async function searchShow() {
+    const searchInput = document.getElementById("searchInput");
+    const movieList = document.getElementById("movie-list");
+    const apiStatus = document.getElementById("api-status");
+
+    const query = searchInput.value.trim();
+
+    if (query === "") {
+        alert("Lütfen aramak istediğiniz dizi adını yazın.");
+        return;
+    }
+
+    movieList.innerHTML = "";
+    apiStatus.innerText = "Arama yapılıyor...";
+
+    try {
+        const response = await fetch("https://api.tvmaze.com/search/shows?q=" + encodeURIComponent(query));
+
+        if (!response.ok) {
+            throw new Error("API bağlantısı başarısız.");
+        }
+
+        const data = await response.json();
+
+        if (data.length === 0) {
+            apiStatus.innerText = "Sonuç bulunamadı.";
+            return;
+        }
+
+        data.slice(0, 6).forEach(item => {
+            createShowCard(item.show);
+        });
+
+        apiStatus.innerText = "Arama sonuçları TVmaze API üzerinden getirildi.";
+    } catch (error) {
+        apiStatus.innerText = "API bağlantısı kurulamadı. Hata: " + error.message;
+    }
+}
+
+function createShowCard(show) {
+    const movieList = document.getElementById("movie-list");
+
+    const image = show.image ? show.image.medium : "https://via.placeholder.com/210x295?text=No+Image";
+    const name = show.name ? show.name : "Bilinmeyen Yapım";
+    const rating = show.rating && show.rating.average ? show.rating.average : "Puan yok";
+    const genres = show.genres && show.genres.length > 0 ? show.genres.join(", ") : "Tür bilgisi yok";
+    const year = show.premiered ? show.premiered.substring(0, 4) : "Yıl yok";
+    const language = show.language ? show.language : "Dil yok";
+    const summary = show.summary ? show.summary.replace(/<[^>]*>/g, "") : "Açıklama bulunmuyor.";
+    const searchUrl = "https://www.google.com/search?q=" + encodeURIComponent(name);
+
+    movieList.innerHTML += `
+        <div class="col-md-6 col-lg-3">
+            <a href="${searchUrl}" target="_blank" class="text-decoration-none text-dark">
+                <div class="card movie-card h-100 shadow border-0">
+                    <img src="${image}" class="card-img-top movie-poster" alt="${name}">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="fw-bold">${name}</h5>
+                        <p class="small text-muted mb-1"><strong>Yıl:</strong> ${year}</p>
+                        <p class="small text-muted mb-1"><strong>Dil:</strong> ${language}</p>
+                        <p class="small text-muted mb-1"><strong>Tür:</strong> ${genres}</p>
+                        <p class="small text-warning fw-bold mb-2">⭐ ${rating}</p>
+                        <p class="small text-muted movie-summary">${summary}</p>
+                        <span class="btn btn-sm btn-outline-primary mt-auto">Webde Ara</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    `;
+}
+
+window.onload = loadFavorites;
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

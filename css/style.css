@@ -1,21 +1,58 @@
-/* Genel Ayarlar */
+/* =========================
+   GENEL AYARLAR
+========================= */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f7f6;
     color: #333;
+    line-height: 1.6;
 }
 
-/* Navbar ve Footer Tasarımı */
-.navbar-brand { font-weight: bold; }
-footer { background-color: #212529; color: white; }
+a {
+    text-decoration: none;
+}
 
-/* CV Sayfasına Özel Semantik Alanlar */
+img {
+    max-width: 100%;
+}
+
+/* =========================
+   NAVBAR & FOOTER
+========================= */
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.navbar .nav-link {
+    transition: 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #0d6efd !important;
+}
+
+footer {
+    background-color: #212529;
+    color: white;
+}
+
+/* =========================
+   ORTAK SAYFA TASARIMI
+========================= */
+
 section {
     background: white;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     margin-bottom: 30px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
 }
 
 h2 {
@@ -31,43 +68,14 @@ article {
     margin-bottom: 20px;
 }
 
-article h4 { color: #495057; }   
-.carousel-item img {
-    height: 500px;
-    object-fit: cover;
+article h4 {
+    color: #495057;
 }
 
-.carousel-caption {
-    padding: 20px;
-}
-/* Slider resimlerinin standart bir boyutta kalması için */
-.main-slider-img {
-    height: 500px;
-    object-fit: cover; /* Resmi sündürmeden kutuya sığdırır */
-}
+/* =========================
+   HAKKIMDA SAYFASI
+========================= */
 
-/* Kutu içindeki yazıların daha okunaklı olması için ufak bir gölge */
-.carousel-caption h5 {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-}
-
-/* Bilgi kutusu için modern arka plan */
-.bg-white.shadow-sm {
-    transition: transform 0.3s ease;
-}
-
-.bg-white.shadow-sm:hover {
-    transform: scale(1.02); /* Üzerine gelince hafif büyür */
-}
-/* --- MİRASIMIZ SAYFASI ÖZEL TASARIMI --- */
-
-/* Bölümler arasındaki geçişleri ve hizalamayı ayarlar */
-.heritage-section {
-    padding: 40px 0;
-    margin-bottom: 20px;
-}
-
-/* Resimlere hafif bir gölge ve hover efekti */
 .heritage-img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -77,44 +85,201 @@ article h4 { color: #495057; }
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* Bölümlere özel kenarlık renkleri -  görsel ayrım için kullandım */
-.border-efes { border-left: 6px solid #0d6efd !important; }    /* Mavi */
-.border-asansor { border-left: 6px solid #dc3545 !important; } /* Kırmızı */
-.border-kule { border-left: 6px solid #ffc107 !important; }    /* Sarı/Altın */
-/* --- İLGİ ALANLARIM SAYFASI ÖZEL TASARIMI --- */
+/* =========================
+   ŞEHRİM SAYFASI
+========================= */
 
-/* Üst kısımdaki havalı başlık alanı (Gradient geçişi) */
-.hobby-header { 
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/izmir4.jpg'); 
-    background-size: cover; 
+.slider-img {
+    height: 450px;
+    object-fit: cover;
+}
+
+.city-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.place-img {
+    height: 260px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    padding: 18px;
+}
+
+.carousel-caption h5 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* =========================
+   MİRASIMIZ SAYFASI
+========================= */
+
+.heritage-section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+}
+
+.border-efes {
+    border-left: 6px solid #0d6efd !important;
+}
+
+.border-asansor {
+    border-left: 6px solid #dc3545 !important;
+}
+
+.border-kule {
+    border-left: 6px solid #ffc107 !important;
+}
+
+/* =========================
+   İLGİ ALANLARIM SAYFASI
+========================= */
+
+.hobby-header {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("../img/izmir4.jpg");
+
+    background-size: cover;
     background-position: center;
-    color: white; 
-    padding: 80px 0; 
+
+    color: white;
+    padding: 90px 0;
 }
 
-/* Barcelona kartına özel sağ-sol renkli şeritler */
-.barca-accent { 
-    border-left: 6px solid #A50044 !important; /* Bordo */
-    border-right: 6px solid #004D98 !important; /* Mavi */
+.hobby-header h1 {
+    letter-spacing: 1px;
 }
 
-/* Kitap tablosunun üzerine gelince hafif parlaması */
-.table-hover tbody tr:hover {
-    background-color: rgba(13, 110, 253, 0.05);
-    transition: 0.3s;
+.hobby-header p {
+    max-width: 700px;
+    margin: 15px auto 0;
 }
 
-/* API'den gelen sözün kutusu */
+.hobby-card {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.hobby-card h2 {
+    color: #0d6efd;
+    border-bottom: 2px solid #0d6efd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.hobby-card article {
+    border-left: 4px solid #dee2e6;
+    padding-left: 15px;
+    margin-bottom: 18px;
+}
+
+.hobby-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.barca-accent {
+    border-left: 7px solid #A50044 !important;
+    border-right: 7px solid #004D98 !important;
+}
+
+.barca-title {
+    color: #A50044;
+}
+
+/* =========================
+   API BÖLÜMÜ
+========================= */
+
+.movie-api-section {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.movie-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18) !important;
+}
+
+.movie-poster {
+    height: 320px;
+    object-fit: cover;
+    background-color: #ddd;
+}
+
+.movie-summary {
+    max-height: 110px;
+    overflow: hidden;
+    font-size: 13px;
+}
+
+/* =========================
+   QUOTE / DARK CARD
+========================= */
+
 .quote-section {
     background-color: #212529;
     color: #f8f9fa;
-    border-radius: 15px;
-    padding: 30px;
+    border-radius: 18px;
+    padding: 35px;
     margin-top: 40px;
 }
-/* --- Login Sayfası Tasarım Ayarları --- */
 
-/* Giriş kartının sayfada dikeyde ve yatayda tam ortalanması için */
+.quote-section button {
+    border-radius: 20px;
+    padding: 7px 18px;
+}
+
+/* =========================
+   TABLE & LIST
+========================= */
+
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.08);
+    transition: 0.3s;
+}
+
+.list-group-item {
+    padding: 14px 10px;
+}
+
+/* =========================
+   FORM TASARIMI
+========================= */
+
+form .form-control,
+form .form-select {
+    border-radius: 10px;
+}
+
+form .form-control:focus,
+form .form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13,110,253,0.15);
+}
+
+/* =========================
+   LOGIN SAYFASI
+========================= */
+
 .login-container {
     min-height: 80vh;
     display: flex;
@@ -122,16 +287,18 @@ article h4 { color: #495057; }
     justify-content: center;
 }
 
-/* Giriş kartı tasarımı: Hafif gölge ve yumuşak köşeler */
 .login-card {
     border: none;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Hocam burası şık dursun diye gölge ekledim */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     background-color: #ffffff;
     transition: transform 0.3s ease;
 }
 
-/* Giriş butonuna hover efekti (üzerine gelince canlanması) */
+.login-card:hover {
+    transform: translateY(-4px);
+}
+
 .btn-login {
     background-color: #0d6efd;
     border: none;
@@ -141,6 +308,38 @@ article h4 { color: #495057; }
 }
 
 .btn-login:hover {
-    transform: translateY(-2px); /* Buton hafif yukarı kalkar */
+    transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 20px;
+    }
+
+    .slider-img,
+    .city-img {
+        height: 280px;
+    }
+
+    .place-img {
+        height: 220px;
+    }
+
+    .movie-poster {
+        height: 280px;
+    }
+
+    .hobby-header {
+        padding: 60px 20px;
+    }
+
+    .carousel-caption {
+        display: none;
+    }
 }
