@@ -104,14 +104,14 @@
                     </div>
                 </div>
 
-                <div class="row g-2">
-                    <div class="col-md-6">
+                <div class="row g-3">
+                    <div class="col-6">
                         <button type="button" onclick="validateNative()" class="btn btn-secondary w-100">
                             Native JS Denetle
                         </button>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-6">
                         <button type="button" onclick="validateVue()" class="btn btn-primary w-100">
                             Vue.js Denetle
                         </button>
@@ -154,10 +154,10 @@
 
         const telefonKontrol = /^[0-9]{10,11}$/;
 
-if (!telefonKontrol.test(telefon)) {
-    alert("Geçerli bir telefon numarası giriniz! Sadece 10 veya 11 rakam olmalıdır.");
-    return false;
-}
+        if (!telefonKontrol.test(telefon)) {
+            alert("Geçerli bir telephone numarası giriniz! Sadece 10 veya 11 rakam olmalıdır.");
+            return false;
+        }
 
         if (konu === "") {
             alert("Lütfen konu seçiniz!");

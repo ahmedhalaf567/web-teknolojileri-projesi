@@ -74,8 +74,10 @@
     </div>
 </main>
 
-<footer class="py-4 mt-5 bg-dark text-white text-center">
-    <p class="m-0 small">© 2026 Ahmed Abdulhalaf</p>
+<footer class="py-4 bg-dark text-white text-center mt-5">
+    <div class="container text-secondary">
+        <p class="m-0 small">© 2026 Ahmet Abdulhalaf - Tüm Hakları Saklıdır.</p>
+    </div>
 </footer>
 
 <script>
