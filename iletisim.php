@@ -152,10 +152,12 @@
             return false;
         }
 
-        if (telefon === "") {
-            alert("Telefon alanı boş bırakılamaz!");
-            return false;
-        }
+        const telefonKontrol = /^[0-9]{10,11}$/;
+
+if (!telefonKontrol.test(telefon)) {
+    alert("Geçerli bir telefon numarası giriniz! Sadece 10 veya 11 rakam olmalıdır.");
+    return false;
+}
 
         if (konu === "") {
             alert("Lütfen konu seçiniz!");
