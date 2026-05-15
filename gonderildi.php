@@ -2,25 +2,70 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Gönderildi | Ahmet Abdulhalaf</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gönderildi | Ahmed Abdulhalaf</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-light p-5">
-    <div class="container bg-white p-5 rounded shadow">
-        <h2 class="text-primary mb-4">Gönderilen Form Verileri</h2>
+
+<body class="bg-light">
+
+<div class="container py-5">
+
+    <div class="bg-white shadow rounded p-5">
+
+        <h2 class="text-primary text-center mb-4">
+            Form Başarıyla Gönderildi
+        </h2>
+
+        <?php if($_POST): ?>
+
         <table class="table table-bordered table-striped">
-            <thead class="table-dark"><tr><th>Alan</th><th>Veri</th></tr></thead>
+
+            <thead class="table-dark">
+                <tr>
+                    <th>Alan</th>
+                    <th>Bilgi</th>
+                </tr>
+            </thead>
+
             <tbody>
+
                 <?php
-                if ($_POST) {
-                    foreach ($_POST as $key => $value) {
-                        echo "<tr><td><b>" . ucfirst($key) . "</b></td><td>" . htmlspecialchars($value) . "</td></tr>";
+                    foreach($_POST as $key => $value){
+
+                        echo "<tr>";
+
+                        echo "<td><strong>" . htmlspecialchars($key) . "</strong></td>";
+
+                        echo "<td>" . htmlspecialchars($value) . "</td>";
+
+                        echo "</tr>";
                     }
-                }
                 ?>
+
             </tbody>
+
         </table>
-        <a href="index.html" class="btn btn-primary mt-3">Ana Sayfaya Dön</a>
+
+        <?php else: ?>
+
+            <div class="alert alert-danger text-center">
+                Herhangi bir veri gönderilmedi!
+            </div>
+
+        <?php endif; ?>
+
+        <div class="text-center mt-4">
+            <a href="iletisim.php" class="btn btn-primary">
+                Forma Geri Dön
+            </a>
+        </div>
+
     </div>
+
+</div>
+
 </body>
 </html>
